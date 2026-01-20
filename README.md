@@ -11,12 +11,15 @@ cp ssh_client_fuzzer.rb /usr/share/metasploit-framework/modules/auxiliary/
 msfupdate
 ```
 
-# 3. Run fuzzer
-msfconsole  
-use auxiliary/ssh_client_fuzzer  
-set SRVPORT 2222  
-set FUZZCMDS SSH_MSG_KEXINIT,SSH_MSG_NEWKEYS,SSH_MSG_SERVICE_REQUEST   
-set STARTSIZE 1000    
-set ENDSIZE 500000   
-set CYCLIC true    
-run        
+# 3 run fuzzer
+
+msfconsole   
+msf6 > reload_all   
+msf6 > use auxiliary/ssh_client_fuzzer  
+msf6 auxiliary(ssh_client_fuzzer) > show options  
+msf6 auxiliary(ssh_client_fuzzer) > set SRVPORT 2222  
+msf6 auxiliary(ssh_client_fuzzer) > run   
+
+# 4. Test targets (new terminal)
+ssh -p 2222 -o StrictHostKeyChecking=no test@127.0.0.1    
+putty -P 2222 127.0.0.1
