@@ -1,10 +1,15 @@
 This module implements an SSH client protocol fuzzer that can test various SSH clients by sending fuzzed packets. It includes options for configuring fuzzing parameters and handles different states of the SSH protocol during the fuzzing process.
 
 # 1. Save ssh_client_fuzzer.rb modules
+
+```
 cp ssh_client_fuzzer.rb /usr/share/metasploit-framework/modules/auxiliary/
+```
 
 # 2. Refresh modules
+```
 msfupdate
+```
 
 # 3. Run fuzzer
 msfconsole  
