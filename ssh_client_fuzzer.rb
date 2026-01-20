@@ -10,7 +10,6 @@ class MetasploitModule < Msf::Auxiliary
         SSH server yang fuzz SSH clients seperti OpenSSH, PuTTY, Bitvise, WinSCP.
         Target parsing bugs di KEXINIT, NEWKEYS, SERVICE_ACCEPT, USERAUTH, CHANNEL.
         
-        Test dengan: ssh -p 2222 test@127.0.0.1
       },
       'Author'         => [ 'AnotherSecurity' ],
       'License'        => MSF_LICENSE,
