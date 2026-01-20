@@ -21,5 +21,5 @@ msf6 auxiliary(ssh_client_fuzzer) > set SRVPORT 2222
 msf6 auxiliary(ssh_client_fuzzer) > run   
 
 # 4. Test targets (new terminal)
-ssh -p 2222 -o StrictHostKeyChecking=no test@127.0.0.1    
+ssh -p 2222 -o StrictHostKeyChecking=test@127.0.0.1    
 putty -P 2222 127.0.0.1
