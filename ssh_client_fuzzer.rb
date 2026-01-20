@@ -11,7 +11,7 @@ class MetasploitModule < Msf::Auxiliary
         Target parsing bugs di KEXINIT, NEWKEYS, SERVICE_ACCEPT, USERAUTH, CHANNEL.
         
       },
-      'Author'         => [ 'AnotherSecurity' ],
+      'Author'         => [ 'AnotherSecurity / pwdnx1337' ],
       'License'        => MSF_LICENSE,
       'References'     => [
         [ 'URL', 'https://tools.ietf.org/html/rfc4253' ]
